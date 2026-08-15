@@ -1,5 +1,5 @@
 import {
-  BookOpen, Droplets, GraduationCap, HandHeart, HeartPulse, HouseHeart,
+  BookOpen, Droplets, GraduationCap, HandHeart, HeartPulse, House,
   Laptop, Leaf, LifeBuoy, PackageOpen, ShieldCheck, Sparkles, Stethoscope,
   Users, UsersRound, type LucideIcon,
 } from 'lucide-react';
@@ -32,7 +32,7 @@ export const focusAreas: FocusArea[] = [
   { title: 'Healthcare', description: 'Medical camps, medicines, mobile clinics, vaccination and maternal care.', icon: HeartPulse, accent: 'blue' },
   { title: 'Education', description: 'Scholarships, school support, libraries, teacher training and digital learning.', icon: GraduationCap, accent: 'green' },
   { title: 'Disaster Relief', description: 'Rapid relief, recovery support and resilient community preparedness.', icon: LifeBuoy, accent: 'gold' },
-  { title: 'Flood Relief', description: 'Emergency food, shelter, hygiene, medical support and recovery.', icon: HouseHeart, accent: 'blue' },
+  { title: 'Flood Relief', description: 'Emergency food, shelter, hygiene, medical support and recovery.', icon: House, accent: 'blue' },
   { title: 'Emergency Response', description: 'Time-critical assistance for families facing humanitarian emergencies.', icon: ShieldCheck, accent: 'gold' },
   { title: 'Food Distribution', description: 'Dignified ration, cooked meals and nutrition support for vulnerable families.', icon: PackageOpen, accent: 'green' },
   { title: 'Clean Water', description: 'Safe drinking water, filtration, wells and hygiene awareness.', icon: Droplets, accent: 'blue' },
