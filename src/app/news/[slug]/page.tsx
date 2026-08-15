@@ -1,0 +1,5 @@
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { CalendarDays } from 'lucide-react';
+import { getNewsPost } from '@/lib/data';
+export default async function NewsDetail({params}:{params:Promise<{slug:string}>}){const{slug}=await params;const p=await getNewsPost(slug);if(!p)notFound();return <><section className="page-hero"><div className="container"><div className="breadcrumbs"><Link href="/news">News</Link> / {p.category}</div><span className="eyebrow">{p.category}</span><h1 className="display-2">{p.title}</h1><p className="lead">{p.excerpt}</p><p className="small"><CalendarDays size={14} style={{display:'inline',marginRight:5}}/>{p.published_at?new Date(p.published_at).toLocaleDateString('en-PK',{day:'numeric',month:'long',year:'numeric'}):''}</p></div></section><section className="section"><article className="container article"><div className="hero-image"><img src={p.image_url||'/placeholder.svg'} alt={p.title}/></div><div className="article-copy">{(p.body||p.excerpt||'').split(/\n+/).map((x,i)=><p key={i}>{x}</p>)}</div></article></section></>}

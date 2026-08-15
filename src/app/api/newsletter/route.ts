@@ -1,0 +1,3 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { createAdminClient } from '@/lib/supabase/admin';
+export async function POST(req:NextRequest){try{const b=await req.json();const email=String(b.email||'').trim().toLowerCase();if(!email.includes('@'))return NextResponse.json({error:'Enter a valid email address.'},{status:400});const db=createAdminClient();const{error}=await db.from('newsletter_subscribers').upsert({email,active:true},{onConflict:'email'});if(error)throw error;return NextResponse.json({ok:true})}catch(e){console.error(e);return NextResponse.json({error:'Subscription could not be saved.'},{status:500})}}

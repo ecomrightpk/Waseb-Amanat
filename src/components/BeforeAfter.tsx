@@ -1,0 +1,3 @@
+'use client';
+import { useState } from 'react';
+export function BeforeAfter(){const[v,setV]=useState(50);return <div className="before-after"><img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1200&q=80" alt="Flood affected area before assistance"/><img className="after" style={{clipPath:`inset(0 ${100-v}% 0 0)`}} src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1200&q=80" alt="Community recovery activity"/><span className="ba-label after">Response</span><span className="ba-label before">Emergency</span><input aria-label="Compare before and after" type="range" min="0" max="100" value={v} onChange={e=>setV(Number(e.target.value))}/></div>}
