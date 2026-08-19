@@ -120,7 +120,7 @@ export default function AboutPage() {
 
                 <div className="founder-portrait">
                   <Image
-                    src="/images/founder-dr-syed-waqas-shabbir.png"
+                    src="/founder-dr-syed-waqas-shabbir.png"
                     alt="Dr. Syed Waqas Shabbir, Founder of Waseb Amanat Foundation"
                     width={1370}
                     height={1724}
